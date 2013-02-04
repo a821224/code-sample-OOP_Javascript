@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face{
+  font-family: Chunky;
+	src: url('fonts/Chunkfive-webfont.ttf'),
+			 url('fonts/Chunkfive-webfont.eot'); /* IE9+ */
+}
+
+h1, h2, h3{
+	font-family:Chunky;
+}
+
+.square{
+	border:1px solid #000000;
+	margin:0px 2px;
+}
+
