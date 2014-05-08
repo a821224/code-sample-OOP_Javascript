@@ -15,7 +15,12 @@ var Players = {human : 0, computer : 1}
 var currentPlayer = Players.human;
 var player = Array();
 
-window.onload = function () {	
+window.onload = function () {
+	/*var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.fillStyle="#FF0000";
+	ctx.fillRect(0,0,80,80);*/
+	
 	// Create new player
 	player = [new Player("Human",Players.human,"#0000FF"),new Player("Computer",Players.computer,"#00FF00")];
 	
@@ -30,12 +35,7 @@ function __alert(msg){
 }
 		
 
-/**
- * Player Class
- * @param: n (string) - players name
- *   t (enum Player) - type of player, either human or computer.
- *   c (string) - hex value for players playing color.
- **/
+// Class Objects
 function Player(n,t,c){
 	this.name=n;
 	this.color=c;
@@ -47,14 +47,13 @@ function Player(n,t,c){
 }
 
 /** 
- * Square Class for each square in the 3x3 game board
+ * Square Object for each square in the 3x3 game board
  **/
 var Square = (function(){
 	/** 
 	 * CONSTRUCTOR
 	 * @param: id - id attribute for the square
 	 *   parent_id - id attribute of parent element
-	 *   classes - css classes for the square
 	 **/
 	function Square(id, parent_id, classes){
 		// Get the new squares parent row DIV element from the DOM
@@ -128,7 +127,6 @@ var Square = (function(){
 				break;
 			}
 		},
-		// AddClass - method to add additional CSS classes to the square //
 		addClass : function(){
 			
 		}
@@ -138,7 +136,7 @@ var Square = (function(){
 })();
 
 /** 
- * GameBoard Class
+ * GameBoard Object
  **/
 var GameBoard = (function(){
 	
